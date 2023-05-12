@@ -16,14 +16,14 @@ namespace F1_CrystalReports_PRJ {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptMain : ReportClass {
+    public class rptExercici1 : ReportClass {
         
-        public rptMain() {
+        public rptExercici1() {
         }
         
         public override string ResourceName {
             get {
-                return "rptMain.rpt";
+                return "rptExercici1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace F1_CrystalReports_PRJ {
         
         public override string FullResourceName {
             get {
-                return "F1_CrystalReports_PRJ.rptMain.rpt";
+                return "F1_CrystalReports_PRJ.rptExercici1.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace F1_CrystalReports_PRJ {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptMain : Component, ICachedReport {
+    public class CachedrptExercici1 : Component, ICachedReport {
         
-        public CachedrptMain() {
+        public CachedrptExercici1() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace F1_CrystalReports_PRJ {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptMain rpt = new rptMain();
+            rptExercici1 rpt = new rptExercici1();
             rpt.Site = this.Site;
             return rpt;
         }

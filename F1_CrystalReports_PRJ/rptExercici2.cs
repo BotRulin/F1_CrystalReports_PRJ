@@ -16,14 +16,14 @@ namespace F1_CrystalReports_PRJ {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptEachGPMain : ReportClass {
+    public class rptExercici2 : ReportClass {
         
-        public rptEachGPMain() {
+        public rptExercici2() {
         }
         
         public override string ResourceName {
             get {
-                return "rptEachGPMain.rpt";
+                return "rptExercici2.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace F1_CrystalReports_PRJ {
         
         public override string FullResourceName {
             get {
-                return "F1_CrystalReports_PRJ.rptEachGPMain.rpt";
+                return "F1_CrystalReports_PRJ.rptExercici2.rpt";
             }
             set {
                 // Do nothing
@@ -74,7 +74,7 @@ namespace F1_CrystalReports_PRJ {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,7 +82,7 @@ namespace F1_CrystalReports_PRJ {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -90,7 +90,7 @@ namespace F1_CrystalReports_PRJ {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
             get {
                 return this.ReportDefinition.Sections[5];
             }
@@ -98,17 +98,33 @@ namespace F1_CrystalReports_PRJ {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[6];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[7];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[8];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptEachGPMain : Component, ICachedReport {
+    public class CachedrptExercici2 : Component, ICachedReport {
         
-        public CachedrptEachGPMain() {
+        public CachedrptExercici2() {
         }
         
         [Browsable(false)]
@@ -145,7 +161,7 @@ namespace F1_CrystalReports_PRJ {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptEachGPMain rpt = new rptEachGPMain();
+            rptExercici2 rpt = new rptExercici2();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace F1_CrystalReports_PRJ
 {
-    public partial class Form1 : Form
+    public partial class frmExercice1 : Form
     {
-        public Form1()
+        public frmExercice1()
         {
             InitializeComponent();
         }

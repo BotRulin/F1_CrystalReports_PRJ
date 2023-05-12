@@ -1,7 +1,7 @@
 ﻿
 namespace F1_CrystalReports_PRJ
 {
-    partial class Form1
+    partial class frmExercice1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,6 +29,7 @@ namespace F1_CrystalReports_PRJ
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExercice1));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.rptMain1 = new F1_CrystalReports_PRJ.rptMain();
             this.SuspendLayout();
@@ -45,14 +46,16 @@ namespace F1_CrystalReports_PRJ
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // Form1
+            // frmExercice1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmExercice1";
+            this.Text = "F1 Reports";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
 
         }

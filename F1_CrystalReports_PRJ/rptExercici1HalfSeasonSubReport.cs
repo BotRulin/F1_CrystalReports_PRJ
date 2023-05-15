@@ -16,14 +16,14 @@ namespace F1_CrystalReports_PRJ {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptHalfSeasonSubReportEx1 : ReportClass {
+    public class rptExercici1HalfSeasonSubReport : ReportClass {
         
-        public rptHalfSeasonSubReportEx1() {
+        public rptExercici1HalfSeasonSubReport() {
         }
         
         public override string ResourceName {
             get {
-                return "rptHalfSeasonSubReportEx1.rpt";
+                return "rptExercici1HalfSeasonSubReport.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace F1_CrystalReports_PRJ {
         
         public override string FullResourceName {
             get {
-                return "F1_CrystalReports_PRJ.rptHalfSeasonSubReportEx1.rpt";
+                return "F1_CrystalReports_PRJ.rptExercici1HalfSeasonSubReport.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace F1_CrystalReports_PRJ {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptHalfSeasonSubReportEx1 : Component, ICachedReport {
+    public class CachedrptExercici1HalfSeasonSubReport : Component, ICachedReport {
         
-        public CachedrptHalfSeasonSubReportEx1() {
+        public CachedrptExercici1HalfSeasonSubReport() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace F1_CrystalReports_PRJ {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptHalfSeasonSubReportEx1 rpt = new rptHalfSeasonSubReportEx1();
+            rptExercici1HalfSeasonSubReport rpt = new rptExercici1HalfSeasonSubReport();
             rpt.Site = this.Site;
             return rpt;
         }

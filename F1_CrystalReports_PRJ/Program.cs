@@ -16,7 +16,7 @@ namespace F1_CrystalReports_PRJ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmExercice1());
+            Application.Run(new frmMain());
         }
     }
 }

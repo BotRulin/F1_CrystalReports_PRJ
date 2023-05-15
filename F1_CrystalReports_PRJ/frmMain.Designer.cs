@@ -1,7 +1,7 @@
 ﻿
 namespace F1_CrystalReports_PRJ
 {
-    partial class frmExercice1
+    partial class frmMain
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,9 +29,9 @@ namespace F1_CrystalReports_PRJ
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExercice1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.rptMain1 = new F1_CrystalReports_PRJ.rptMain();
+            this.rptMain1 = new F1_CrystalReports_PRJ.rptExercici1();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -63,7 +63,7 @@ namespace F1_CrystalReports_PRJ
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private rptMain rptMain1;
+        private rptExercici1 rptMain1;
     }
 }
 

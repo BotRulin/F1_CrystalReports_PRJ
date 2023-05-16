@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="rptExercici3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptExercici3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,10 @@
       <DependentUpon>rptExercici2GeneralStandingSubReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="rptExercici3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptExercici3.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,18 +140,27 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\arabia-saudi.jpg" />
-    <Content Include="Images\arabia-saudi_1.jpg" />
-    <Content Include="Images\australia.jpg" />
-    <Content Include="Images\austria.jpg" />
-    <Content Include="Images\azerbaiyan.jpg" />
-    <Content Include="Images\bahrein.jpg" />
-    <Content Include="Images\canada.jpg" />
-    <Content Include="Images\emilia-romagna.jpg" />
-    <Content Include="Images\espana.jpg" />
+    <Content Include="Images\esquema_circuits\arabia-saudi.jpg" />
+    <Content Include="Images\esquema_circuits\arabia-saudi_1.jpg" />
+    <Content Include="Images\esquema_circuits\australia.jpg" />
+    <Content Include="Images\esquema_circuits\austria.jpg" />
+    <Content Include="Images\esquema_circuits\azerbaiyan.jpg" />
+    <Content Include="Images\esquema_circuits\bahrein.jpg" />
+    <Content Include="Images\esquema_circuits\canada.jpg" />
+    <Content Include="Images\esquema_circuits\emilia-romagna.jpg" />
+    <Content Include="Images\esquema_circuits\espana.jpg" />
+    <Content Include="Images\esquema_circuits\miami.jpg" />
+    <Content Include="Images\esquema_circuits\monaco.jpg" />
     <Content Include="Images\formula-1-logo-200.png" />
-    <Content Include="Images\miami.jpg" />
-    <Content Include="Images\monaco.jpg" />
+    <Content Include="Images\pilots\carlos-sainz.jpg" />
+    <Content Include="Images\pilots\esteban-ocon.jpg" />
+    <Content Include="Images\pilots\george-russell.jpg" />
+    <Content Include="Images\pilots\lando-norris.jpg" />
+    <Content Include="Images\pilots\lewis-hamilton.jpg" />
+    <Content Include="Images\pilots\max-verstappen.jpg" />
+    <Content Include="Images\pilots\oscar-piastri.jpg" />
+    <Content Include="Images\pilots\pierre-gasly.jpg" />
+    <Content Include="Images\pilots\sergio-perez.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

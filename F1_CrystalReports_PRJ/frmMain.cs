@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,8 +29,12 @@ namespace F1_CrystalReports_PRJ
         private void informationOfEachGPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReportDocument reporte = new ReportDocument();
-            reporte.Load(@"C:\Users\rexpo\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Grado Superior\S1AM\PRJ\2a Setmana\M4 Crystal Reports\F1_CrystalReports_PRJ\F1_CrystalReports_PRJ\rptExercici1.rpt");
-            
+            // Obtiene la ruta base del ejecutable
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            // Combina la ruta base con el nombre del archivo de informe
+            string reportPath = Path.Combine(basePath, "rptExercici1.rpt"); 
+            // Carga y muestra el informe
+            reporte.Load(reportPath);
             CrystalReportViewer crystalReportViewer = new CrystalReportViewer();
             crystalReportViewer.ReportSource = reporte;
 
@@ -44,8 +49,12 @@ namespace F1_CrystalReports_PRJ
         private void classificationOfEachGPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReportDocument reporte = new ReportDocument();
-            reporte.Load(@"C:\Users\rexpo\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Grado Superior\S1AM\PRJ\2a Setmana\M4 Crystal Reports\F1_CrystalReports_PRJ\F1_CrystalReports_PRJ\rptExercici2.rpt");
-
+            // Obtiene la ruta base del ejecutable
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            // Combina la ruta base con el nombre del archivo de informe
+            string reportPath = Path.Combine(basePath, "rptExercici2.rpt");
+            // Carga y muestra el informe
+            reporte.Load(reportPath);
             CrystalReportViewer crystalReportViewer = new CrystalReportViewer();
             crystalReportViewer.ReportSource = reporte;
 
@@ -60,8 +69,12 @@ namespace F1_CrystalReports_PRJ
         private void summaryOfEachPilotToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReportDocument reporte = new ReportDocument();
-            reporte.Load(@"C:\Users\rexpo\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\Grado Superior\S1AM\PRJ\2a Setmana\M4 Crystal Reports\F1_CrystalReports_PRJ\F1_CrystalReports_PRJ\rptExercici3.rpt");
-
+            // Obtiene la ruta base del ejecutable
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            // Combina la ruta base con el nombre del archivo de informe
+            string reportPath = Path.Combine(basePath, "rptExercici3.rpt");
+            // Carga y muestra el informe
+            reporte.Load(reportPath);
             CrystalReportViewer crystalReportViewer = new CrystalReportViewer();
             crystalReportViewer.ReportSource = reporte;
 

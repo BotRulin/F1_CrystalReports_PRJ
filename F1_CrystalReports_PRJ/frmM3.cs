@@ -25,9 +25,29 @@ namespace F1_CrystalReports_PRJ
             Hide();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        //This method open the Windows File Explorer and takes the Path of the file you pick
+        private void btnDots_Click(object sender, EventArgs e)
         {
+            // Declaration of Variables
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
 
+            //Shows the File Explorer to select the file
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "c:\\";
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //Get the path of specified file
+                filePath = openFileDialog.FileName;
+
+                txtBoxFile.Text = filePath;
+            }
         }
+
+
     }
 }

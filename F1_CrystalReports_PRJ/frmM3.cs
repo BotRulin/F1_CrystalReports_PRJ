@@ -24,5 +24,10 @@ namespace F1_CrystalReports_PRJ
             // Oculta el formulario principal
             Hide();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

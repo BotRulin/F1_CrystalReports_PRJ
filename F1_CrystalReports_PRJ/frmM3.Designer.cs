@@ -42,8 +42,9 @@ namespace F1_CrystalReports_PRJ
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAppend = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxInfo = new System.Windows.Forms.TextBox();
+            this.MessageBox = new System.Windows.Forms.TextBox();
             this.menuStripM3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +102,7 @@ namespace F1_CrystalReports_PRJ
             this.btnDots.TabIndex = 4;
             this.btnDots.Text = "...";
             this.btnDots.UseVisualStyleBackColor = true;
+            this.btnDots.Click += new System.EventHandler(this.btnDots_Click);
             // 
             // btnLoad
             // 
@@ -165,15 +167,6 @@ namespace F1_CrystalReports_PRJ
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(54, 285);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(347, 157);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -184,13 +177,30 @@ namespace F1_CrystalReports_PRJ
             this.label1.TabIndex = 13;
             this.label1.Text = "Grand Prix Information";
             // 
+            // txtBoxInfo
+            // 
+            this.txtBoxInfo.Location = new System.Drawing.Point(54, 285);
+            this.txtBoxInfo.Multiline = true;
+            this.txtBoxInfo.Name = "txtBoxInfo";
+            this.txtBoxInfo.Size = new System.Drawing.Size(347, 157);
+            this.txtBoxInfo.TabIndex = 14;
+            // 
+            // MessageBox
+            // 
+            this.MessageBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MessageBox.Location = new System.Drawing.Point(0, 474);
+            this.MessageBox.Name = "MessageBox";
+            this.MessageBox.Size = new System.Drawing.Size(304, 20);
+            this.MessageBox.TabIndex = 15;
+            // 
             // frmM3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 494);
+            this.Controls.Add(this.MessageBox);
+            this.Controls.Add(this.txtBoxInfo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnStatistics);
             this.Controls.Add(this.btnAppend);
             this.Controls.Add(this.btnSearch);
@@ -229,7 +239,8 @@ namespace F1_CrystalReports_PRJ
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAppend;
         private System.Windows.Forms.Button btnStatistics;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxInfo;
+        private System.Windows.Forms.TextBox MessageBox;
     }
 }

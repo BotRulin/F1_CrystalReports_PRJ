@@ -44,7 +44,7 @@ namespace F1_CrystalReports_PRJ
             this.btnStatistics = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxInfo = new System.Windows.Forms.TextBox();
-            this.MessageBox = new System.Windows.Forms.TextBox();
+            this.lblMessageBox = new System.Windows.Forms.Label();
             this.menuStripM3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -113,6 +113,7 @@ namespace F1_CrystalReports_PRJ
             this.btnLoad.TabIndex = 5;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnSaveCsv
             // 
@@ -123,14 +124,20 @@ namespace F1_CrystalReports_PRJ
             this.btnSaveCsv.TabIndex = 6;
             this.btnSaveCsv.Text = "Save as CSV";
             this.btnSaveCsv.UseVisualStyleBackColor = true;
+            this.btnSaveCsv.Click += new System.EventHandler(this.btnSaveCsv_Click);
             // 
             // cmbBoxSelection1
             // 
             this.cmbBoxSelection1.FormattingEnabled = true;
+            this.cmbBoxSelection1.Items.AddRange(new object[] {
+            "Grand Prix",
+            "Racing Team",
+            "Drivers"});
             this.cmbBoxSelection1.Location = new System.Drawing.Point(54, 223);
             this.cmbBoxSelection1.Name = "cmbBoxSelection1";
             this.cmbBoxSelection1.Size = new System.Drawing.Size(121, 21);
             this.cmbBoxSelection1.TabIndex = 7;
+            this.cmbBoxSelection1.SelectedIndexChanged += new System.EventHandler(this.cmbBoxSelection1_SelectedIndexChanged);
             // 
             // cmbBoxSelection2
             // 
@@ -139,6 +146,7 @@ namespace F1_CrystalReports_PRJ
             this.cmbBoxSelection2.Name = "cmbBoxSelection2";
             this.cmbBoxSelection2.Size = new System.Drawing.Size(121, 21);
             this.cmbBoxSelection2.TabIndex = 8;
+            this.cmbBoxSelection2.SelectedIndexChanged += new System.EventHandler(this.cmbBoxSelection2_SelectedIndexChanged);
             // 
             // btnSearch
             // 
@@ -148,6 +156,7 @@ namespace F1_CrystalReports_PRJ
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnAppend
             // 
@@ -157,6 +166,7 @@ namespace F1_CrystalReports_PRJ
             this.btnAppend.TabIndex = 10;
             this.btnAppend.Text = "Append";
             this.btnAppend.UseVisualStyleBackColor = true;
+            this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
             // 
             // btnStatistics
             // 
@@ -166,6 +176,7 @@ namespace F1_CrystalReports_PRJ
             this.btnStatistics.TabIndex = 11;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // label1
             // 
@@ -185,20 +196,21 @@ namespace F1_CrystalReports_PRJ
             this.txtBoxInfo.Size = new System.Drawing.Size(347, 157);
             this.txtBoxInfo.TabIndex = 14;
             // 
-            // MessageBox
+            // lblMessageBox
             // 
-            this.MessageBox.BackColor = System.Drawing.SystemColors.Control;
-            this.MessageBox.Location = new System.Drawing.Point(0, 474);
-            this.MessageBox.Name = "MessageBox";
-            this.MessageBox.Size = new System.Drawing.Size(304, 20);
-            this.MessageBox.TabIndex = 15;
+            this.lblMessageBox.AutoSize = true;
+            this.lblMessageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblMessageBox.Location = new System.Drawing.Point(12, 468);
+            this.lblMessageBox.Name = "lblMessageBox";
+            this.lblMessageBox.Size = new System.Drawing.Size(0, 17);
+            this.lblMessageBox.TabIndex = 16;
             // 
             // frmM3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 494);
-            this.Controls.Add(this.MessageBox);
+            this.Controls.Add(this.lblMessageBox);
             this.Controls.Add(this.txtBoxInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStatistics);
@@ -241,6 +253,6 @@ namespace F1_CrystalReports_PRJ
         private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxInfo;
-        private System.Windows.Forms.TextBox MessageBox;
+        private System.Windows.Forms.Label lblMessageBox;
     }
 }

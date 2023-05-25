@@ -36,6 +36,9 @@ namespace F1_CrystalReports_PRJ
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadFile();
+            //GetElementName();
+            //GetElementData();
+
         }
 
         private void btnSaveCsv_Click(object sender, EventArgs e)
@@ -45,7 +48,24 @@ namespace F1_CrystalReports_PRJ
 
         private void cmbBoxSelection1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*List<string> listSelection;
 
+            cmbBoxSelection2.Enabled = true;
+            cmbBoxSelection2.Items.Clear();
+            cmbBoxSelection2.SelectedIndex = -1;
+
+            switch (cmbBoxSelection1.SelectedIndex)
+            {
+                case 0:
+                    listSelection = drivers;
+                    break;
+                case 1:
+                    listSelection = grandPrix;
+                    break;
+                case 2:
+                    listSelection = racingTeams;
+                    break;
+            }*/
         }
 
         private void cmbBoxSelection2_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,7 +97,7 @@ namespace F1_CrystalReports_PRJ
             //Shows the File Explorer to select the file
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "c:\\";
-            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.Filter = "xml files (*.xml)|*.xml";
             openFileDialog.FilterIndex = 2;
             openFileDialog.RestoreDirectory = true;
 
@@ -87,17 +107,19 @@ namespace F1_CrystalReports_PRJ
                 filePath = openFileDialog.FileName;
                 txtBoxFile.Text = filePath;
                 var fileStream = openFileDialog.OpenFile();
-                StreamReader reader = new StreamReader(fileStream);
-                fileContent = reader.ReadToEnd();
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    fileContent = reader.ReadToEnd();
+                }
+
                 lblMessageBox.Text = "Correctly File";
             }
             else
             {
                 lblMessageBox.Text = "There's an error with the file.";
             }
-        }
+        }  
 
-       
         private void LoadFile()
         {
             // Check if a file is already selected
@@ -111,11 +133,26 @@ namespace F1_CrystalReports_PRJ
 
             try
             {
-                // Read the file content
-                string fileContent = File.ReadAllText(filePath);
+                List<string> elementXML = new List<string>();
 
-                // Display the content in the textbox
-                txtBoxInfo.Text = fileContent;
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        // Aquí puedes realizar cualquier operación o manipulación que necesites con las líneas del XML
+                        // Por ejemplo, puedes agregar la línea a la lista directamente
+
+                        elementXML.Add(line);
+                    }
+                }
+
+                // Puedes utilizar la lista 'elementXML' como desees
+                foreach (string line in elementXML)
+                {
+                    // Realiza alguna acción con cada línea del XML
+                    Console.WriteLine(line);
+                }
 
                 lblMessageBox.Text = "File loaded successfully.";
             }
@@ -123,6 +160,39 @@ namespace F1_CrystalReports_PRJ
             {
                 lblMessageBox.Text = "An error occurred while loading the file: " + ex.Message;
             }
+
         }
+
+        /*private void GetElementName(List<string> xmlContent)
+        {
+            int startIndex = xmlContent.IndexOf("<") + 1;
+            int endIndex = xmlContent.IndexOf(">");
+            if (startIndex != -1 && endIndex != -1 && endIndex > startIndex)
+            {
+                string elementName = xmlContent.Substring(startIndex, endIndex - startIndex);
+                txtBoxInfo.Text = "Nombre del elemento: " + elementName;
+            }
+        }
+
+        private void GetElementData(List<string> xmlContent)
+        {
+            int startIndex = xmlContent.IndexOf(">") + 1;
+            int endIndex = xmlContent.LastIndexOf("<");
+            if (startIndex != -1 && endIndex != -1 && endIndex > startIndex)
+            {
+                string elementData = xmlContent.Substring(startIndex, endIndex - startIndex);
+                txtBoxInfo.Text = "Valor del elemento: " + elementData;
+            }
+            else
+            {
+                txtBoxInfo.Text = "Valor del elemento: ";
+            }
+        }*/
     }
 }
+
+
+/*Metodo compilar Datos
+ciclar variable lista
+
+ */

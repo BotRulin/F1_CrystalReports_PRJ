@@ -130,9 +130,9 @@ namespace F1_CrystalReports_PRJ
             // 
             this.cmbBoxSelection1.FormattingEnabled = true;
             this.cmbBoxSelection1.Items.AddRange(new object[] {
+            "Drivers",
             "Grand Prix",
-            "Racing Team",
-            "Drivers"});
+            "Racing Team"});
             this.cmbBoxSelection1.Location = new System.Drawing.Point(54, 223);
             this.cmbBoxSelection1.Name = "cmbBoxSelection1";
             this.cmbBoxSelection1.Size = new System.Drawing.Size(121, 21);
@@ -141,6 +141,7 @@ namespace F1_CrystalReports_PRJ
             // 
             // cmbBoxSelection2
             // 
+            this.cmbBoxSelection2.Enabled = false;
             this.cmbBoxSelection2.FormattingEnabled = true;
             this.cmbBoxSelection2.Location = new System.Drawing.Point(280, 223);
             this.cmbBoxSelection2.Name = "cmbBoxSelection2";
@@ -193,6 +194,8 @@ namespace F1_CrystalReports_PRJ
             this.txtBoxInfo.Location = new System.Drawing.Point(54, 285);
             this.txtBoxInfo.Multiline = true;
             this.txtBoxInfo.Name = "txtBoxInfo";
+            this.txtBoxInfo.ReadOnly = true;
+            this.txtBoxInfo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtBoxInfo.Size = new System.Drawing.Size(347, 157);
             this.txtBoxInfo.TabIndex = 14;
             // 
